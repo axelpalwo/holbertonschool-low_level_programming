@@ -6,13 +6,13 @@
 int main(void)
 {
 	/* This script starts at ASCII code number 'a' 97 and goes until 'z' at 122*/
-	char letter = "a";
+	char letter = 'a';
 	int code = 97;
 
 	while (code <= 122)
 	{
 		putchar(letter);
-		putchar("\n");
+		putchar('\n');
 		letter++;
 		code++;
 	}
