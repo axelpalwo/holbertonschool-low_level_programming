@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	/* This script starts at ASCII code number 'a' 97 and goes until 'z' at 122*/
+	/* Starts at ASCII code number 'a' 97 and goes until 'z' at 122*/
 	char letter = 'a';
 	int code = 97;
 
@@ -16,4 +16,5 @@ int main(void)
 		letter++;
 		code++;
 	}
+	return (0);
 }
