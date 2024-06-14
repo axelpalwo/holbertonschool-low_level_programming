@@ -6,7 +6,7 @@
 int main(void)
 {
 	/* Print all numbers from 0 to 10 */
-	int i = 0;
+	char i = '0';
 
 	while (i < 10)
 	{
