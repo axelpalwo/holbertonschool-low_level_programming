@@ -11,7 +11,12 @@ int main(void)
 
 	while (code <= 122)
 	{
-		if (letter != 'q' && letter != 'e')
+		if (letter == 'q' || letter == 'e')
+		{
+			letter++;
+			code++;
+		}
+		else
 		{
 			putchar(letter);
 			letter++;
