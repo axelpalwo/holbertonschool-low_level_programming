@@ -9,7 +9,7 @@ int main(void)
 	char letter = '0';
 	int code = 48;
 
-	while (code > 58)
+	while (code < 58)
 	{
 		putchar(letter);
 		letter++;
@@ -17,7 +17,7 @@ int main(void)
 	}
 	code = 97;
 	letter = 'a';
-	while (code >= 102)
+	while (code <= 102)
 	{
 		putchar(letter);
 		letter++;
