@@ -12,9 +12,9 @@ int main(void)
 	while (code <= 122)
 	{
 		putchar(letter);
-		putchar('\n');
 		letter++;
 		code++;
 	}
+	putchar('\n');
 	return (0);
 }
