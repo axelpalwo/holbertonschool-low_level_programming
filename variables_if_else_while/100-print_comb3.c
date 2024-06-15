@@ -27,9 +27,7 @@ int main(void)
 						putchar(' ');
 						num2++;
 					} else
-					{
 						break;
-					}
 				}
 				if (num2 == 58)
 				{
@@ -40,10 +38,7 @@ int main(void)
 			counter2 = 0;
 			counter++;
 		} else
-		{
 			num2++;
-		}
-
 	}
 	putchar('\n');
 	return (0);
