@@ -11,7 +11,7 @@ int main(void)
 	int counter = 0;
 	int counter2 = 0;
 
-	for ( ; counter < 9 ; counter++)
+	for ( ; counter < 9 ; )
 	{
 		if (num1 != num2)
 		{
@@ -21,7 +21,7 @@ int main(void)
 				{
 					putchar(num1);
 					putchar(num2);
-					if (num1 != 57)
+					if (num1 != 56)
 					{
 						putchar(',');
 						putchar(' ');
@@ -38,6 +38,7 @@ int main(void)
 				}
 			}
 			counter2 = 0;
+			counter++;
 		} else
 		{
 			num2++;
