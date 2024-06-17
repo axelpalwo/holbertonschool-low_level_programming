@@ -1,6 +1,7 @@
 #include "main.h"
 /*
  * _islower - Entry point
+ * Description: 'This script determines if a character is lower'
  * @c: Variable for a character to test
  * Return: 1 (Success) - 0 (Otherwise)
  */
