@@ -10,17 +10,18 @@ void print_alphabet_x10(void)
 	char letter = 'a';
 	int counter = 0;
 
-	while (letter != '{')
+	while (counter < 10)
 	{
-		_putchar(letter);
-		letter++;
-		if (letter == 'z')
+		while (letter != '|')
 		{
-			counter++;
-			_putchar('\n');
-			letter = 'a';
+			_putchar(letter);
+			letter++;
+			if (letter == '{')
+			{
+				_putchar('\n');
+				letter = 'a';
+			}
 		}
-		if (counter == 10)
-			break;
+		counter++;
 	}
 }
