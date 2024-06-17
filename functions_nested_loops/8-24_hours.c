@@ -18,7 +18,9 @@ void jack_bauer(void)
 			{
 				while (min2 <= 9)
 				{
-					if (hours1 != 2 && hours2 != 3 && min1 != 5 && min2 != 9)
+					if (hours1 == 2 && hours2 == 3 && min1 == 5 && min2 == 9)
+						break;
+					else
 					{
 						_putchar(hours1 + '0');
 						_putchar(hours2 + '0');
@@ -27,9 +29,7 @@ void jack_bauer(void)
 						_putchar(min2 + '0');
 						_putchar('\n');
 						min2++;
-					} else
-						break;
-				}
+					}
 				min1++;
 			}
 			hours2++;
