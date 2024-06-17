@@ -14,11 +14,13 @@ void print_alphabet_x10(void)
 	{
 		_putchar(letter);
 		letter++;
-		counter++;
 		if (letter == 'z')
+		{
 			letter = 'a';
+			counter++;
+			_putchar('\n');
+		}
 		if (counter == 10)
 			break;
 	}
-	_putchar('\n');
 }
