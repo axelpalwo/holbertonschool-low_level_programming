@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 /**
  * print_alphabet_x10 - Entry point
  * Return: Always 0
@@ -7,19 +8,17 @@
 
 void print_alphabet_x10(void)
 {
-	char letter = 'a';
+	int letter = 'a';
+	int counter = 0;
 
-	for (int counter = 0; counter < 10; counter++)
+	for( ; counter < 10 ; counter++)
 	{
-		while (letter != '|')
+		while (letter != '{')
 		{
 			_putchar(letter);
-			letter++;
-			if (letter == '{')
-			{
+			if (letter == 'z')
 				_putchar('\n');
-				letter = 'a';
-			}
+			letter++;
 		}
 	}
 }
