@@ -16,7 +16,11 @@ void print_alphabet_x10(void)
 		{
 			_putchar(letter);
 			if (letter == 'z')
+			{
 				_putchar('\n');
+				letter = 'a';
+				continue;
+			}
 			letter++;
 		}
 	}
