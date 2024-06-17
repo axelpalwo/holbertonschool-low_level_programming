@@ -8,9 +8,8 @@
 void print_alphabet_x10(void)
 {
 	char letter = 'a';
-	int counter = 0;
 
-	while (counter < 10)
+	for (int counter = 0; counter < 10; counter++)
 	{
 		while (letter != '|')
 		{
@@ -22,6 +21,5 @@ void print_alphabet_x10(void)
 				letter = 'a';
 			}
 		}
-		counter++;
 	}
 }
