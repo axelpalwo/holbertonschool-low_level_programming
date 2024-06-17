@@ -20,11 +20,11 @@ void jack_bauer(void)
 				{
 					if (hours1 != 2 && hours2 != 3 && min1 != 5 && min2 != 9)
 					{
-						_putchar(hours1);
-						_putchar(hours2);
+						_putchar(hours1 + '0');
+						_putchar(hours2 + '0');
 						_putchar(':');
-						_putchar(min1);
-						_putchar(min2);
+						_putchar(min1 + '0');
+						_putchar(min2 + '0');
 						_putchar('\n');
 						min2++;
 					} else
