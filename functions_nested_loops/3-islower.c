@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _islower - Entry point
  * @c: character
  * Return: 1 (Success) - 0 (Otherwise)
