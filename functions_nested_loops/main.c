@@ -1,5 +1,5 @@
 #include "main.h"
-#include "1-print_alphabet.c"
+#include "1-alphabet.c"
 /**
  * main - check the code
  * Return: Always 0
