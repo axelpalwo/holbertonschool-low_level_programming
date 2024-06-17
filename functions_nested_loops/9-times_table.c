@@ -1,13 +1,12 @@
 #include "main.h"
+#include "9.01-putchar.c"
 /**
  * times_table - prints a table
  * Return: No return
  */
 void times_table(void)
 {
-	int number = 0;
-	int multiplier = 0;
-	int result;
+	int result, number = 0, multiplier = 0;
 
 	while (multiplier < 10)
 	{
@@ -23,25 +22,17 @@ void times_table(void)
 			{
 				if (result >= 10)
 				{
-					_putchar(' ');
-					_putchar((result / 10) + '0');
-					_putchar((result % 10) + '0');
-					_putchar(',');
+					_putcharresultbig(result);
 				}
 				if (result < 10)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(result + '0');
-					_putchar(',');
+					_putcharresultlittle(result);
 				}
 			} else
 			{
 				if (result >= 10)
 				{
-					_putchar(' ');
-					_putchar((result / 10) + '0');
-					_putchar((result % 10) + '0');
+					_putcharresultfinal(result);
 				} else
 				{
 					_putchar(' ');
