@@ -27,7 +27,7 @@ void jack_bauer(void)
 			min1++;
 			min2 = 0;
 		}
-		if (min1 == 10)
+		if (min1 == 6)
 		{
 			hours2++;
 			min1 = 0;
