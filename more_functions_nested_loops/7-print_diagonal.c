@@ -34,7 +34,6 @@ void print_diagonal(int n)
 					counter++;
 					n--;
 				}
-				_putchar('\n');
 			}
 		}
 	}
