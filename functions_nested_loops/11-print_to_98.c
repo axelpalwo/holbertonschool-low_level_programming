@@ -57,7 +57,7 @@ void print_to_98(int n)
 				{
 					var = n % 100;
 					if (var >= 10)
-						var = (var / 10) - 1;
+						var = (var % 10);
 					_putchar((n / 100) + '0');
 					_putchar(((n % 100) / 10) + '0');
 					_putchar(var + '0');
