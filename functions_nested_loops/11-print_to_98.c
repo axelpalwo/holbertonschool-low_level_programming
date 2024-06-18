@@ -31,11 +31,22 @@ void print_to_98(int n)
 					_putchar((-n) + '0');
 					_putchar(',');
 					_putchar(' ');
-				} else
+				} else if (n <= -99)
 				{
 					_putchar('-');
 					_putchar(((-n) / 10) + '0');
 					_putchar(((-n) % 10) + '0');
+					_putchar(',');
+					_putchar(' ');
+				} else
+				{
+					var = (-n) % 100;
+					if (var >= 10)
+						var = (var % 10);
+					_putchar('-');
+					_putchar(((-n) / 100) + '0');
+					_putchar((((-n) % 100) / 10) + '0');
+					_putchar(var + '0');
 					_putchar(',');
 					_putchar(' ');
 				}
