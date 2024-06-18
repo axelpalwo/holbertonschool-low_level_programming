@@ -1,9 +1,33 @@
 #include "main.h"
 
+void _printresultnegativesimple(int n)
+{
+	_putchar('-');
+	_putchar((-n) + '0');
+	_putchar(',');
+	_putchar(' ');
+}
+
+void _printresultsimple(int n)
+{
+	_putchar((n / 10) + '0');
+	_putchar((n % 10) + '0');
+	_putchar('\n');
+}
+
 void _printresult10(int n)
 {
 	_putchar((n / 10) + '0');
 	_putchar((n % 10) + '0');
+	_putchar(',');
+	_putchar(' ');
+}
+
+void _printresultnegative10(int n)
+{
+	_putchar('-');
+	_putchar(((-n) / 10) + '0');
+	_putchar(((-n) % 10) + '0');
 	_putchar(',');
 	_putchar(' ');
 }
