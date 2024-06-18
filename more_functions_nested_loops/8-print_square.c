@@ -5,7 +5,7 @@
  * Return: None
  */
 void print_square(int size)
-{	
+{
 	int length = size;
 	int constant = size;
 
