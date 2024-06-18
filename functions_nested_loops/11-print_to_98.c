@@ -31,7 +31,7 @@ void print_to_98(int n)
 					_putchar((-n) + '0');
 					_putchar(',');
 					_putchar(' ');
-				} else if (n <= -99)
+				} else if (n >= -99)
 				{
 					_putchar('-');
 					_putchar(((-n) / 10) + '0');
