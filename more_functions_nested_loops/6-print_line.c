@@ -6,9 +6,6 @@
  */
 void print_line(int n)
 {
-	if (n < 0)
-		n = -n;
-
 	if (n > 0)
 	{
 		while (n > 0)
