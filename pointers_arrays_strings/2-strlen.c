@@ -9,15 +9,13 @@ int _strlen(char *s)
 	int i = 0;
 	int length = 0;
 
-	do
-	{
+	do {
 		if (s[i] != '\0')
 			length++;
 		else
 			break;
 		i++;
-	}
-	while (i < 999);
+	} while (i < 999);
 
 	return (length);
 }
