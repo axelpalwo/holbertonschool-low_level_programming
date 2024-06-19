@@ -16,7 +16,8 @@ int _strlen(char *s)
 		else
 			break;
 		i++;
-	} while (i < 999);
+	}
+	while (i < 999);
 
 	return (length);
 }
