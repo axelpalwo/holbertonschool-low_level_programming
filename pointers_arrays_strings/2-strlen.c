@@ -6,8 +6,17 @@
  */
 int _strlen(char *s)
 {
-	int length = sizeof(*s);
+	int i = 0;
+	int length = 0;
 
-	length /= 4;
+	do
+	{
+		if (s[i] != '\0')
+			length++;
+		else
+			break;
+		i++;
+	} while (i < 999);
+
 	return (length);
 }
