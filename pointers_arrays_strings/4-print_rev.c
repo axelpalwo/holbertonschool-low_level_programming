@@ -21,10 +21,7 @@ void print_rev(char *str)
 		if (i >= 0)
 			_putchar(str[i]);
 		else
-		{
-			_putchar('\n');
 			break;
-		}
 		i--;
 	}
 }
