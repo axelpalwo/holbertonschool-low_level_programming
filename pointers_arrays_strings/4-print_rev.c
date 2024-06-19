@@ -18,7 +18,7 @@ void print_rev(char *str)
 	}
 	while (counter == 0)
 	{
-		if (i != 0)
+		if (i >= 0)
 			_putchar(str[i]);
 		else
 		{
