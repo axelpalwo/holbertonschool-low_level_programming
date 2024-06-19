@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts - Prints a string
+ * print_rev - Prints a string
  * @str: String
  * Return: None
  */
