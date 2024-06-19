@@ -16,12 +16,16 @@ void print_rev(char *str)
 		else
 			break;
 	}
+	i--;
 	while (counter == 0)
 	{
 		if (i >= 0)
 			_putchar(str[i]);
 		else
+		{
+			_putchar('\n');
 			break;
+		}
 		i--;
 	}
 }
