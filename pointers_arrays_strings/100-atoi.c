@@ -7,22 +7,43 @@
  */
 int _atoi(char *s)
 {
-	int i = 1;
+	int i = 0;
+	int j = 2;
+	int number = 1;
+	int len = length(s);
+	int sign = 1;
+	int quant_numbers = 0;
 	int multiplier = 1;
-	int number = 0;
 
-	if (s[0] == '-')
-		i = 1;
-
-	while (s[i] != '\0')
+	while (i <= len)
 	{
-		number += s[i] - '0';
+		if (s[i] == '-')
+			sign = -sign;
+		else if (s[i] == '+')
+			sign = sign;
+		else if (s[i] >= 48 && s[i] <= 57)
+			quant_numbers++;
+		else
+			continue;
 		i++;
 	}
+	i = 0;
 	while (i >= 0)
 	{
-		number +=  * multiplier;
-		multiplier *= 10;
+		if (s[i] >= 48 && s[i] <= 57)
+		{
+			while (j <= quant_numbers)
+			{
+				multiplier *= 10;
+				j++;
+			}
+			j = 2;
+			number += (s[i + quant_numbers] - '0') * multiplier;
+			quant_numbers--;
+		}
+		multiplier = 1;
 	}
+	number -= 1;
+	number *= sign;
 	return (number);
 }
