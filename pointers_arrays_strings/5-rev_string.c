@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * rev_string - Prints a string in reverse
  * @str: String
@@ -15,12 +14,15 @@ void rev_string(char *str)
 	{
 		i++;
 	}
-	i--;
 	len = i;
 	for (i = 0 ; i < len; i++)
 	{
 		letters[i] = str[len - i - 1];
 	}
 	letters[len] = '\0';
-	strcpy(str, letters);
+	for (i = 0; i < len; i++)
+	{
+		str[i] = letters[i];
+	}
+	str[len] = '\0';
 }
