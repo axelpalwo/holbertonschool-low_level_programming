@@ -10,7 +10,7 @@ int _atoi(char *s)
 {
 	int i = 0;
 	int j = 2;
-	int number = 0;
+	int number = -1;
 	int len = length(s);
 	int sign = 1;
 	int quant_numbers = 0;
@@ -61,5 +61,6 @@ int _atoi(char *s)
 		i++;
 	}
 	number *= sign;
+	number += 1;
 	return (number);
 }
