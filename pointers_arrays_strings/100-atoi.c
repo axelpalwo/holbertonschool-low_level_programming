@@ -47,6 +47,7 @@ int _atoi(char *s)
 				number += (s[i] - '0') * multiplier;
 			else
 			{
+				number *= sign;
 				number += (s[i] - '0') * multiplier;
 				break;
 			}
@@ -55,6 +56,5 @@ int _atoi(char *s)
 		multiplier = 1;
 		i++;
 	}
-	number *= sign;
 	return (number);
 }
