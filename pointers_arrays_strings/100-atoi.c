@@ -48,7 +48,10 @@ int _atoi(char *s)
 			else
 			{
 				number *= sign;
-				number -= 1;
+				if (number < 0)
+					number += 1;
+				else
+					number -= 1;
 				number += (s[i] - '0') * multiplier;
 				break;
 			}
