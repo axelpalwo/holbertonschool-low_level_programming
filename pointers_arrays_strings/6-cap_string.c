@@ -20,7 +20,6 @@ char *cap_string(char *str)
 		{
 			if (str[i] == array[i])
 			{
-				printf("Entre en el IF");
 				if (str[i + 1] >= 97 && str[i + 1] <= 122)
 				{
 					str[i + 1] = str[i + 1] - 32;
