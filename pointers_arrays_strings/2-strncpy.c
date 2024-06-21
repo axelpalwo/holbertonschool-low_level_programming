@@ -11,9 +11,9 @@ char *_strncpy(char *dest, char *src, int n)
 	int lensrc = length(src);
 	int i = 0;
 
-	while (i <= n)
+	while (i < n)
 	{
-		if (i < lensrc - 1)
+		if (i < lensrc)
 			dest[i] = src[i];
 		else
 			dest[i] = '\0';
