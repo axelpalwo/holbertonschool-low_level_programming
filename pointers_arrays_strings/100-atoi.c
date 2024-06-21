@@ -20,8 +20,6 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			sign = -sign;
-		else if (s[i] == '+')
-			sign = sign;
 		else if (s[i] >= 48 && s[i] <= 57)
 			if (s[i + 1] >= 48 && s[i + 1] <= 57)
 				quant_numbers++;
@@ -41,7 +39,7 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] >= 48 && s[i] <= 57)
-		{	
+		{
 			while (j <= quant_numbers)
 			{
 				multiplier *= 10;
