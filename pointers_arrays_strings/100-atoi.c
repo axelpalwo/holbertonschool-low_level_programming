@@ -44,14 +44,12 @@ int _atoi(char *s)
 			}
 			j = 2;
 			if (s[i + 1] >= 48 && s[i + 1] <= 57)
-				number += (s[i] - '0') * multiplier;
+				number += ((s[i] - '0') * multiplier) * sign;
 			else
 			{
-				number += (s[i] - '0') * multiplier;
+				number += ((s[i] - '0') * multiplier) * sign;
 				break;
 			}
-			if (sign < 0 && number > 0)
-				number *= sign;
 			quant_numbers--;
 		}
 		multiplier = 1;
