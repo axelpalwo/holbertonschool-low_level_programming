@@ -21,17 +21,10 @@ int _atoi(char *s)
 		if (s[i] == '-')
 			sign = -sign;
 		else if (s[i] >= 48 && s[i] <= 57)
-			if (s[i + 1] >= 48 && s[i + 1] <= 57)
-				quant_numbers++;
-			else
-			{
-				quant_numbers++;
-				break;
-			}
-		else
 		{
-			i++;
-			continue;
+			if (s[i + 1] <= 48 && s[i + 1] >= 57)
+				break;
+			quant_numbers++;
 		}
 		i++;
 	}
