@@ -50,11 +50,12 @@ int _atoi(char *s)
 				number += (s[i] - '0') * multiplier;
 				break;
 			}
+			if (sign < 0 && number > 0)
+				number *= sign;
 			quant_numbers--;
 		}
 		multiplier = 1;
 		i++;
 	}
-	number *= sign;
 	return (number);
 }
