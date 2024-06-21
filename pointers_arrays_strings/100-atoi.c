@@ -1,5 +1,6 @@
 #include "main.h"
 #include "length.c"
+#include <stdio.h>
 /**
  * _atoi - Convers a string into an int
  * @s: String
@@ -22,26 +23,42 @@ int _atoi(char *s)
 		else if (s[i] == '+')
 			sign = sign;
 		else if (s[i] >= 48 && s[i] <= 57)
-			quant_numbers++;
+			if (s[i + 1] >= 48 && s[i + 1] <= 57)
+				quant_numbers++;
+			else
+			{
+				quant_numbers++;
+				break;
+			}
 		else
+		{
+			i++;
 			continue;
+		}
 		i++;
 	}
 	i = 0;
-	while (i >= 0)
+	while (s[i] != '\0')
 	{
 		if (s[i] >= 48 && s[i] <= 57)
-		{
+		{	
 			while (j <= quant_numbers)
 			{
 				multiplier *= 10;
 				j++;
 			}
 			j = 2;
-			number += (s[i + quant_numbers] - '0') * multiplier;
+			if (s[i + 1] >= 48 && s[i + 1] <= 57)
+				number += (s[i] - '0') * multiplier;
+			else
+			{
+				number += (s[i] - '0') * multiplier;
+				break;
+			}
 			quant_numbers--;
 		}
 		multiplier = 1;
+		i++;
 	}
 	number -= 1;
 	number *= sign;
