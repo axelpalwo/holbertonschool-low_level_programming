@@ -19,8 +19,8 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
-	if (i == len)
-		return (NULL);
-	else
+	if (i <= len)
 		return (s + i);
+	else
+		return (NULL);
 }
