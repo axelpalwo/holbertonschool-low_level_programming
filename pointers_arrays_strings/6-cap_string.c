@@ -14,7 +14,7 @@ char *cap_string(char *str)
 	'(', ')', '{', '}', ' ', '\t', '\n'
 	};
 	int lenarray = sizeof(array) / sizeof(array[0]);
-	
+
 	if (str[i] >= 97 && str[i] <= 122)
 		str[i] = str[i] - 32;
 	while (str[i] != '\0')
