@@ -10,11 +10,15 @@ char *cap_string(char *str)
 {
 	int i = 0;
 	int v = 0;
-	char array[] = {',',';','.','!','?','"','(',')','{','}',' ','\t','\n'};
+	char array[] = {',', ';', '.', '!', '?', '"',
+	'(', ')', '{', '}', ' ', '\t', '\n'
+	};
 	int lenarray = sizeof(array) / sizeof(array[0]);
-
+	
+	if (str[i] >= 97 && str[i] <= 122)
+		str[i] = str[i] - 32;
 	while (str[i] != '\0')
- 	{
+	{
 		while (v <= lenarray)
 		{
 			if (str[i] == array[v])
