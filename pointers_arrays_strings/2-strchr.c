@@ -19,7 +19,10 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
-	if (i < len)
+	if (s[i] != '\0')
+		i++;
+
+	if (i <= len)
 		return (s + i);
 	else
 		return (NULL);
