@@ -1,4 +1,5 @@
 #include "main.h"
+#include "length.c"
 /**
  * *leet - Encodes a string into 1337
  * @string: String
@@ -7,19 +8,23 @@
 char *leet(char *string)
 {
 	int i = 0;
+	int v = 0;
+	int numVal[] = {0, 1, 3, 4, 7};
+	char *letterVal[] = {"O", "L", "E", "A", "T"};
+	int arrlen = sizeof(letterVal) / sizeof(letterVal[0]);
 
 	while (string[i] != '\0')
 	{
-		if (string[i] == 65 || string[i] == 97)
-			string[i] = 52;
-		else if (string[i] == 69 || string[i] == 101)
-			string[i] = 51;
-		else if (string[i] == 79 || string[i] == 111)
-			string[i] = 48;
-		else if (string[i] == 84 || string[i] == 116)
-			string[i] = 55;
-		else if (string[i] == 76 || string[i] == 108)
-			string[i] = 49;
+		while (v < arrlen)
+		{
+			if (string[i] == *letterVal[v] || string[i] == (*letterVal[v] + 32))
+			{
+				string[i] = numVal[v] + '0';
+				break;
+			}
+			v++;
+		}
+		v = 0;
 		i++;
 	}
 	return (string);
