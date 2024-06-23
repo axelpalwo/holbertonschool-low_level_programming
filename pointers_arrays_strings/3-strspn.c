@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (i < lenarr)
 	{
-		if (s[i] != ',' && str[i] != '\0')
+		if (s[i] != ',' && s[i] != '\0')
 		{
 			while (v < len)
 			{
