@@ -15,15 +15,8 @@ char *_strchr(char *s, char c)
 	while (i < len)
 	{
 		if (s[i] == c)
-			break;
+			return (s + i);
 		i++;
 	}
-
-	if (i == len && s[i] != '\0')
-		i++;
-
-	if (i <= len)
-		return (s + i);
-	else
-		return (NULL);
+	return (NULL);
 }
