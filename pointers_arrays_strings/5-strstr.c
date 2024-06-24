@@ -14,7 +14,9 @@ char *_strstr(char *haystack, char *needle)
 	int v = 0;
 	int i_placeholder;
 	int v_placeholder;
-
+	
+	if (len_needle <= 2)
+		return (haystack);
 	while (haystack[i] != '\0')
 	{
 		while (v < len_needle)
