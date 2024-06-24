@@ -9,7 +9,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int len_needle = length(needle);
+	int len_needle = length(needle) + 1;
 	int i = 0;
 	int v = 0;
 	int i_placeholder;
@@ -29,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 					v++;
 				}
 				if (v == len_needle)
-					return (haystack + i - len_needle);
+					return (haystack + i_placeholder);
 			}
 			v = v_placeholder + 1;
 		}
