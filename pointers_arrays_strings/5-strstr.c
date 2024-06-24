@@ -21,8 +21,9 @@ char *_strstr(char *haystack, char *needle)
 		{
 			i_placeholder = i;
 			v_placeholder = v;
-			if (haystack[i] == needle[v])
-			{
+			if (haystack[i] == needle[0])
+			{	
+				v = 0;
 				while (haystack[i] == needle[v] && haystack[i] != '\0')
 				{
 					i++;
