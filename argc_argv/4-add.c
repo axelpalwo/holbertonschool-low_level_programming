@@ -12,17 +12,24 @@ int main(int argc, char *argv[])
 	int i;
 	int num;
 	int result = 0;
+	char *arg;
 
 	for (i = 1; i < argc; i++)
 	{
+		arg = argv[i];
+		for( ; *arg != '\0'; arg++)
+		{
+			if (*arg >= '0' && *arg <= '9')
+				continue;
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 		num = atoi(argv[i]);
 		if (num > 0)
 			result += num;
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
 	}
 	if (result == 0)
 	{
