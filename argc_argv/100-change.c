@@ -11,6 +11,8 @@ int main(int argc, char *argv[])
 {
 	int num;
 	int result = 0;
+	int i;
+	int cents[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -23,33 +25,14 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	while (num > 0)
+	while (i < 5 && num > 0)
 	{
-		if (num / 25 > 0)
+		if (num / cents[i] > 0)
 		{
-			result += num / 25;
-			num %= 25;
+			result += num / cents[i];
+			num %= cents[i];
 		}
-		else if (num / 10 > 0)
-		{
-			result += num / 10;
-			num %= 10;
-		}
-		else if (num / 5 > 0)
-		{
-			result += num / 5;
-			num %= 5;
-		}
-		else if (num / 2 > 0)
-		{
-			result += num / 2;
-			num %= 2;
-		}
-		else
-		{
-			result += num;
-			num -= 1;
-		}
+		i++;
 	}
 	printf("%i\n", result);
 	return (0);
