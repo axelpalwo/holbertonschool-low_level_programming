@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num = atoi(argv[1]);
+	int num =;
 	int result = 0;
 
 	if (argc != 2)
@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	num = atoi(argv[1]);
 	if (num < 0)
 	{
 		printf("0\n");
