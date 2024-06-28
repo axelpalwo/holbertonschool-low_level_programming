@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
 			num %= cents[i];
 		}
 		i++;
+		if (i == 5)
+			i = 0;
 	}
 	printf("%i\n", result);
 	return (0);
