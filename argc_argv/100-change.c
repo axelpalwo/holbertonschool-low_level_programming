@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int num;
 	int result = 0;
-	int i;
+	int i = 0;
 	int cents[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
