@@ -1,4 +1,5 @@
 #include "main.h"
+#include "length.c"
 /**
  * *_strdup - Returns a pointer of the copy of a string
  * @str: String
@@ -11,7 +12,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	strcpy = malloc(strlen(str) + 1);
+	strcpy = malloc(length(str) + 1);
 	if (strcpy == NULL)
 		return (NULL);
 	while (str[i] != '\0')
