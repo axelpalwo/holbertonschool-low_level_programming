@@ -21,5 +21,6 @@ char *_strdup(char *str)
 		i++;
 	}
 	strcpy[i] = '\0';
+	free(strcpy);
 	return (strcpy);
 }
