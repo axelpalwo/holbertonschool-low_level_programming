@@ -21,9 +21,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	lens1 = length(s1);
 	lens2 = length(s2);
-	newstr = malloc(((lens1 + lens2) + 1)* sizeof(char));
+	newstr = malloc(((lens1 + lens2) + 1) * sizeof(char));
 	if (newstr == NULL)
+	{
+		free(newstr);
 		return (NULL);
+	}
 	while (i < lens1)
 	{
 		newstr[i] = s1[i];
