@@ -29,12 +29,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n < lens2)
 	{
-		while (n < lens2)
+		while (n > 0)
 		{
 			newstr[i] = s2[v];
 			i++;
 			v++;
-			n++;
+			n--;
 		}
 	} else
 	{
