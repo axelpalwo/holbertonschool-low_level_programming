@@ -15,41 +15,36 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int lens2;
 	char *newstr;
 
+	/* Tratamos strings nulls*/
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	/* Longitud de los strings */
 	lens1 = length(s1);
 	lens2 = length(s2);
-	newstr = malloc(((lens1 + lens2) + 1) * sizeof(char));
+	/* Si n es mayor a Len2, toma su valor */
+	if (n > lens2)
+		n = lens2;
+	/* Espacio dinamico de newstring */
+	newstr = malloc((lens1 + n + 1));
+	/* Malloc handle error */
 	if (newstr == NULL)
-	{
-		free(newstr);
 		return (NULL);
-	}
+	/* Copiamos String1 */
 	while (i < lens1)
 	{
 		newstr[i] = s1[i];
 		i++;
 	}
-	if (n < lens2)
+	/* Copiamos String2 */
+	while (v < n)
 	{
-		while (n > 0)
-		{
-			newstr[i] = s2[v];
-			i++;
-			v++;
-			n--;
-		}
-	} else
-	{
-		while (v < lens2)
-		{
-			newstr[i] = s2[v];
-			i++;
-			v++;
-		}
+		newstr[i] = s2[v];
+		i++;
+		v++;
 	}
+	/* Colocamos Null al final del String */
 	newstr[i] = '\0';
 	return (newstr);
 }
