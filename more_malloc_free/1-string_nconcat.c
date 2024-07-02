@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 	} else
 	{
-		while (v < lens2)
+		while (v <= lens2)
 		{
 			newstr[i] = s2[v];
 			i++;
