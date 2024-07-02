@@ -27,9 +27,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newstr[i] = s1[i];
 		i++;
 	}
-	if (n < lens2)
+	if (n <= lens2)
 	{
-		while (n < lens2)
+		while (n <= lens2)
 		{
 			newstr[i] = s2[v];
 			i++;
@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 	} else
 	{
-		while (v <= lens2)
+		while (v < lens2)
 		{
 			newstr[i] = s2[v];
 			i++;
