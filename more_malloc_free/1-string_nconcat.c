@@ -11,8 +11,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0;
 	unsigned int v = 0;
-	unsigned int lens1 = length(s1) - 1;
-	unsigned int lens2 = length(s2) - 1;
+	unsigned int lens1 = length(s1);
+	unsigned int lens2 = length(s2);
 	char *newstr;
 
 	if (s1 == NULL)
@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			newstr[i] = s2[v];
 			i++;
 			v++;
-			n--;
+			n++;
 		}
 	} else
 	{
