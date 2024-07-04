@@ -15,11 +15,16 @@ int *array_range(int min, int max)
 	arr = malloc((max - min) * sizeof(int));
 	if (arr == NULL)
 		return (NULL);
-	while (min < max)
-	{
+	if (min == max)
 		arr[i] = min;
-		i++;
-		min++;
+	else
+	{
+		while (min < max)
+		{
+			arr[i] = min;
+			i++;
+			min++;
+		}
 	}
 
 	return (arr);
