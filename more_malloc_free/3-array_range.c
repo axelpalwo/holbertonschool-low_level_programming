@@ -21,6 +21,8 @@ int *array_range(int min, int max)
 		i++;
 		min++;
 	}
+	if (min == max)
+		arr[i] = min;
 
 	return (arr);
 }
