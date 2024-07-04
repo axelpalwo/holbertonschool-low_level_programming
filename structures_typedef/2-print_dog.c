@@ -1,7 +1,7 @@
 #include "dog.h"
 /**
  * print_dog - Prints the attributes of dog
- * @d - Instance of dog
+ * @d: Instance of dog
  * Return: 0 Success
  */
 void print_dog(struct dog *d)
