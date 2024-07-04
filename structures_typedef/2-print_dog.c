@@ -1,4 +1,4 @@
-#include "main.h"
+#include "dog.h"
 /**
  * print_dog - Prints the attributes of dog
  * @d - Instance of dog
