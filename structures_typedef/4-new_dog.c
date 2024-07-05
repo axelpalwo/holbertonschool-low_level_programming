@@ -15,7 +15,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (newdog == NULL)
 		return (NULL);
 	/* Le asignamos valor al atributo name*/
-	newdog->name = newname;
+	newdog->name = name;
 	if (newdog->name == NULL)
 	{
 		free(newdog->name);
@@ -24,7 +24,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* Le asignamos valor al atributo age */
 	newdog->age = age;
 	/* Le asignamos valor al atributo owner */
-	newdog->owner = newowner;
+	newdog->owner = owner;
 	if (newdog->owner == NULL)
 	{
 		free(newdog->owner);
