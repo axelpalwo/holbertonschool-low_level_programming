@@ -22,7 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_name);
 		return (NULL);
 	}
-	new_name = _strncpy(new_name, name, len_name);
+	_strncpy(new_name, name, len_name);
 
 	new_owner = malloc(sizeof(char) * len_owner);
 	if (new_owner == NULL)
@@ -30,27 +30,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_owner);
 		return (NULL);
 	}
-	new_owner = _strncpy(new_owner, owner, len_owner);
+	_strncpy(new_owner, owner, len_owner);
 	/* Malloc de la nueva estructura*/
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
+	{
+		free(new_name);
+		free(new_owner);
 		return (NULL);
-	/* Le asignamos valor al atributo name*/
+	}
+	/* Le asignamos valor al atributo name, age y owner*/
 	newdog->name = new_name;
-	if (newdog->name == NULL)
-	{
-		free(newdog->name);
-		free(newdog);
-	}
-	/* Le asignamos valor al atributo age */
 	newdog->age = age;
-	/* Le asignamos valor al atributo owner */
 	newdog->owner = new_owner;
-	if (newdog->owner == NULL)
-	{
-		free(newdog->owner);
-		free(newdog);
-	}
 	/* Retornamos la nueva estructura formada */
 	return (newdog);
 }
