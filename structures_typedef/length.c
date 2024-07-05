@@ -6,5 +6,5 @@ int length(char *str)
 	{
 		i++;
 	}
-	return (i - 1);
+	return (i);
 }
