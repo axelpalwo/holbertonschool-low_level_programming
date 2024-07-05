@@ -18,19 +18,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	new_name = malloc(sizeof(char) * len_name);
 	if (new_name == NULL)
+		return (NULL);
+	_strncpy(new_name, name, len_name);
+	new_name[len_name - 1] = '\0';
+	new_owner = malloc(sizeof(char) * len_owner);
+	if (new_owner == NULL)
 	{
 		free(new_name);
 		return (NULL);
 	}
-	_strncpy(new_name, name, len_name);
-
-	new_owner = malloc(sizeof(char) * len_owner);
-	if (new_owner == NULL)
-	{
-		free(new_owner);
-		return (NULL);
-	}
 	_strncpy(new_owner, owner, len_owner);
+	new_owner[len_owner - 1] = '\0';
 	/* Malloc de la nueva estructura*/
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
