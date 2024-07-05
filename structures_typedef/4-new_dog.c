@@ -24,7 +24,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	new_name = _strncpy(new_name, name, len_name);
 
-	new_owner = malloc(sizeof(char) + len_owner);
+	new_owner = malloc(sizeof(char) * len_owner);
 	if (new_owner == NULL)
 	{
 		free(new_owner);
