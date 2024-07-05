@@ -11,26 +11,26 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
-	int len_name = length(name) + 1;
-	int len_owner = length(owner) + 1;
+	int len_name = length(name);
+	int len_owner = length(owner);
 	char *new_owner;
 	char *new_name;
 
-	new_name = malloc(sizeof(len_name));
+	new_name = malloc(sizeof(name));
 	if (new_name == NULL)
 	{
 		free(new_name);
 		return (NULL);
 	}
-	new_name = _strncpy(new_name, name, len_name);
+	new_name = _strncpy(new_name, name, len_name + 1);
 
-	new_owner = malloc(sizeof(len_owner));
+	new_owner = malloc(sizeof(owner));
 	if (new_owner == NULL)
 	{
 		free(new_owner);
 		return (NULL);
 	}
-	new_owner = _strncpy(new_owner, owner, len_owner);
+	new_owner = _strncpy(new_owner, owner, len_owner + 1);
 	/* Malloc de la nueva estructura*/
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
