@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	/* Enviamos el operando para seleccionar la funci√n de la operaco√ */
 	func = get_op_func(argv[2]);
 	/* Si el operando no esta en la lista, get_op_func retorna NULL */
-	if (*func == NULL)
+	if (*func == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
