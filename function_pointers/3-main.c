@@ -3,7 +3,7 @@
  * main - Entry point
  *@argc: Count of args
  *@argv: Array of args
- *Return: Result of operand
+ *Return: 0 Success
  */
 int main(int argc, char *argv[])
 {
@@ -36,5 +36,5 @@ int main(int argc, char *argv[])
 	/* Si todo esta correcto, llamamos a la funcion y retornamos el resultado*/
 	result = func(num1, num2);
 	printf("%i\n", result);
-	return (result);
+	return (0);
 }
