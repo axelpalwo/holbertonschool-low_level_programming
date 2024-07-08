@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	/* Si tiene Argumentos distintos a 4 (Nombre - Num1 - Op - Num2) */
 	if (argc != 4)
 	{
-		printf("Error:\n");
+		printf("Error\n");
 		exit(98);
 	}
 	/* Trabajamos los parametros */
