@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include "format_filter.c"
 /**
  * print_all - Prints anything
  * @format: Formats to be printed
@@ -7,14 +6,10 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, v = 0, counter = 0;
-	char *new_format; /* formateador filtrado */
+	int i = 0, v = 0;
+	char new_format[4];
 	va_list ap;
 
-	counter = format_filter(format);
-	new_format = malloc(counter * sizeof(char));
-	if (new_format == NULL)
-		exit(98);
 	while (format[i] != '\0')
 	{
 		switch (format[i])
@@ -31,7 +26,7 @@ void print_all(const char * const format, ...)
 	}
 	v = 0;
 	va_start(ap, format);
-	while (v < counter)
+	while (v < 4)
 	{
 		switch (new_format[v])
 		{
@@ -49,7 +44,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 
-		if (v != counter - 1)
+		if (v < 2)
 			printf(", ");
 		v++;
 	}
