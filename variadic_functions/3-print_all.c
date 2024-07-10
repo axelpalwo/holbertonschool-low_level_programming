@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 	}
 	v = 0;
 	va_start(ap, format);
-	while (v < 3)
+	while (v < 4)
 	{
 		switch (new_format[v])
 		{
@@ -43,7 +43,6 @@ void print_all(const char * const format, ...)
 				printf("%s", va_arg(ap, char *));
 				break;
 		}
-
 		if (v < 2)
 			printf(", ");
 		v++;
