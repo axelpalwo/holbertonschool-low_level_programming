@@ -24,11 +24,11 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	v = 0;
+	i = 0;
 	va_start(ap, format);
-	while (v < 4)
+	while (i < v)
 	{
-		switch (new_format[v])
+		switch (new_format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(ap, int));
@@ -43,9 +43,9 @@ void print_all(const char * const format, ...)
 				printf("%s", va_arg(ap, char *));
 				break;
 		}
-		if (v < 2)
+		if (i < v - 1)
 			printf(", ");
-		v++;
+		i++;
 	}
 	printf("\n");
 }
