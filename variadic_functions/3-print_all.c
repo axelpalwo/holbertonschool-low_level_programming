@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 	}
 	v = 0;
 	va_start(ap, format);
-	while (v < 4)
+	while (v < 3)
 	{
 		switch (new_format[v])
 		{
