@@ -1,4 +1,6 @@
 #include "variadic_functions.h"
+#include "new_format.c"
+#include "length.c"
 /**
  * print_all - Prints anything
  * @format: Formats to be printed
@@ -7,31 +9,16 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0, v = 0;
-	char new_format[4];
 	va_list ap;
-	char *str;
-	char *separator = "";
+	char *str, *separator = "", new_format[4];
 
 	if (format == NULL)
 	{
 		printf("\n");
 		return;
 	}
-	while (format[i] != '\0')
-	{
-		switch (format[i])
-		{
-			case 'c':
-			case 'i':
-			case 'f':
-			case 's':
-				new_format[v] = format[i];
-				v++;
-				break;
-		}
-		i++;
-	}
-	i = 0;
+	new_formatter(new_format, format);
+	v = length(new_format);
 	va_start(ap, format);
 	while (i < v)
 	{
