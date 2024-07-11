@@ -10,6 +10,8 @@ void print_all(const char * const format, ...)
 	char new_format[4];
 	va_list ap;
 
+	if (format == NULL)
+		return;
 	while (format[i] != '\0')
 	{
 		switch (format[i])
