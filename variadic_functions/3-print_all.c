@@ -9,6 +9,8 @@ void print_all(const char * const format, ...)
 	int i = 0, v = 0;
 	char new_format[4];
 	va_list ap;
+	char *str;
+	char *separator = "";
 
 	if (format == NULL)
 	{
@@ -33,6 +35,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	while (i < v)
 	{
+		printf("%s", separator);
 		switch (new_format[i])
 		{
 			case 'c':
@@ -45,11 +48,16 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(ap, double));
 				break;
 			case 's':
-				printf("%s", va_arg(ap, char *));
+				str = va_arg(ap, char *);
+				if (str == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
 				break;
 		}
-		if (i < v - 1)
-			printf(", ");
+		separator = ", ";
 		i++;
 	}
 	printf("\n");
