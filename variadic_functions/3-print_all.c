@@ -11,7 +11,10 @@ void print_all(const char * const format, ...)
 	va_list ap;
 
 	if (format == NULL)
+	{
+		printf("\n");
 		return;
+	}
 	while (format[i] != '\0')
 	{
 		switch (format[i])
