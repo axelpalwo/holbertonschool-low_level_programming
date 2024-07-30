@@ -1,1 +1,1 @@
-This repository is made for learning C language
+This repository was made to improve the C language
