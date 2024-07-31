@@ -6,16 +6,18 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *current;
+	const dlistint_t *current;
 	size_t counter = 0;
 
 	if (h == NULL)
-		return (NULL);
+		return (counter);
 
 	current = h;
 	while (current != NULL)
 	{
 		counter++;
+		printf("%i\n",current->n);
 		current = current->next;
 	}
-
+	return (counter);
+}
