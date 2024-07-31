@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * print_dlistint - Prints all the elements in a double list
- * @dlistint_t: Double list
+ * @h: Double list
  * Return: Number of elements
  */
 size_t print_dlistint(const dlistint_t *h)
@@ -16,7 +16,7 @@ size_t print_dlistint(const dlistint_t *h)
 	while (current != NULL)
 	{
 		counter++;
-		printf("%i\n",current->n);
+		printf("%i\n", current->n);
 		current = current->next;
 	}
 	return (counter);
