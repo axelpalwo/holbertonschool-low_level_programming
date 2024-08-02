@@ -9,7 +9,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *str;
-	ssize_t nbytes = 0, nwritten = 0;
+	size_t nbytes = 0;
+	ssize_t nwritten = 0;
 
 	str = malloc(letters);
 	if (str == NULL)
