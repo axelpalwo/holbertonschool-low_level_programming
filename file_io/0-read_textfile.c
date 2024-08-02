@@ -26,7 +26,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	nwritten = write(1, str, nbytes);
+	if (letters > nbytes)
+		nwritten = write(STDERR_FILENO, str, nbytes);
+	else
+		nwritten = write(1, str, nbytes);
 	free(str);
 	close(fd);
 	return (nwritten);
