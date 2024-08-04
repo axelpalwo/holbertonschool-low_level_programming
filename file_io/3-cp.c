@@ -11,10 +11,10 @@ int pastefile(char *buffer, const char *file_to, int bnum)
 	int fd, bb = bnum;
 
 	if (bb == 1)
-		fd = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, 0664);
+		fd = open(file_to, O_WRONLY | O_CREAT | O_APPEND, 0664);
 	else
-		fd = open(file_to, O_APPEND | O_WRONLY, 0664);
-	printf("El valor es bb es %i, y fd es %i", bb, fd);
+		fd = open(file_to, O_APPEND | O_WRONLY);
+	printf("El valor es bb es %i, y fd es %i\n", bb, fd);
 	if (fd == -1)
 	{
 		printf("Error, Can't write to %s\n", file_to);
