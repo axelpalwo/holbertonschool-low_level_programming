@@ -52,7 +52,7 @@ int pastefile(char *buffer, const char *file_to)
 		exit(99);
 		return (-1);
 	}
-	write(fd, buffer, strlen(buffer));
+	write(fd, buffer, 1024);
 	if (close(fd) == -1)
 	{
 		printf("Error: Can't close fd %i\n", fd);
