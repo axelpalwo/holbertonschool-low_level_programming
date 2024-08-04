@@ -1,5 +1,42 @@
 #include "main.h"
 /**
+ * length - Gets the length of a string
+ * @str: String
+ * Return: Number of bytes of a string
+ */
+int length(char *str)
+{
+	int i = 0;
+	
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+/**
+ * _strncpy - Copies a string into another
+ * @dest: Destiny to be reemplaced
+ * @src: Source to be copied
+ * @n: Number of bytes copied
+ * Return: New string
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int lensrc =length(src);
+	int i = 0;
+
+	while (i < n)
+	{
+		if (i <= lensrc)
+			dest[i] = src[i];
+		else
+			dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
+/**
  * copyfile - Copies the content of a file
  *@file_from: Text to copy
  *Return: String
@@ -78,7 +115,7 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	
-	strncpy(buffer, copyfile(argv[1]), 1024);
+	_strncpy(buffer, copyfile(argv[1]), 1024);
 	if (buffer == NULL)
 		return (-1);
 	result = pastefile(buffer, argv[2]);
